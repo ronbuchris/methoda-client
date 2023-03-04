@@ -11,7 +11,7 @@ const getAllTransitions = async () => {
 };
 const createTransition = async (transition: ITransition): Promise<ITransition> => {
   try {
-    const { data } = await axios.post('https://monkfish-app-co32f.ondigitalocean.app/api/transition/', { transition })
+    const { data } = await axios.post('https://sea-lion-app-ui2iv.ondigitalocean.app/api/transition/', { transition })
     return data
   } catch (err) {
     throw (err)
@@ -19,7 +19,7 @@ const createTransition = async (transition: ITransition): Promise<ITransition> =
 };
 const deleteTransition = async (transitionId: string) => {
   try {
-    const { data } = await axios.delete('https://monkfish-app-co32f.ondigitalocean.app/api/transition/', { data: { transitionId } })
+    const { data } = await axios.delete('https://sea-lion-app-ui2iv.ondigitalocean.app/api/transition/', { data: { transitionId } })
     return data
   } catch (err) {
     throw (err)
@@ -27,7 +27,7 @@ const deleteTransition = async (transitionId: string) => {
 };
 const deleteTransitions = async (statusId: string) => {
   try {
-    const { data } = await axios.delete('https://monkfish-app-co32f.ondigitalocean.app/api/transition/deleteMany', { data: { statusId } })
+    const { data } = await axios.delete('https://sea-lion-app-ui2iv.ondigitalocean.app/api/transition/deleteMany', { data: { statusId } })
     return data
   } catch (err) {
     throw (err)
@@ -35,7 +35,7 @@ const deleteTransitions = async (statusId: string) => {
 };
 const resetWorkflowTransitions = async () => {
   try {
-    const { data } = await axios.delete('https://monkfish-app-co32f.ondigitalocean.app/api/transition/reset')
+    const { data } = await axios.delete('https://sea-lion-app-ui2iv.ondigitalocean.app/api/transition/reset')
     return data
   } catch (err) {
     throw (err)

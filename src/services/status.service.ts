@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getAllStatuses = async () => {
   try {
-    const { data } = await axios.get('https://monkfish-app-co32f.ondigitalocean.app/api/status/')
+    const { data } = await axios.get('https://sea-lion-app-ui2iv.ondigitalocean.app/api/status/')
     return data
   } catch (err) {
     throw (err)
@@ -11,7 +11,7 @@ const getAllStatuses = async () => {
 };
 const createStatus = async (status: IStatus): Promise<IStatus> => {
   try {
-    const { data } = await axios.post('https://monkfish-app-co32f.ondigitalocean.app/api/status/', { status })
+    const { data } = await axios.post('https://sea-lion-app-ui2iv.ondigitalocean.app/api/status/', { status })
     return data
   } catch (err) {
     throw (err)
@@ -19,7 +19,7 @@ const createStatus = async (status: IStatus): Promise<IStatus> => {
 };
 const deleteStatus = async (statusId: string) => {
   try {
-    const { data } = await axios.delete('https://monkfish-app-co32f.ondigitalocean.app/api/status/', { data: { statusId } })
+    const { data } = await axios.delete('https://sea-lion-app-ui2iv.ondigitalocean.app/api/status/', { data: { statusId } })
     return data
   } catch (err) {
     throw (err)
@@ -27,7 +27,7 @@ const deleteStatus = async (statusId: string) => {
 };
 const updateStatuses = async (data: IStatus[]) => {
   try {
-    const updatedStatuses = await axios.put('https://monkfish-app-co32f.ondigitalocean.app/api/status/', { data })
+    const updatedStatuses = await axios.put('https://sea-lion-app-ui2iv.ondigitalocean.app/api/status/', { data })
     return updatedStatuses.data
   } catch (err) {
     throw (err)
@@ -35,7 +35,7 @@ const updateStatuses = async (data: IStatus[]) => {
 };
 const resetWorkflowStatuses = async () => {
   try {
-    const { data } = await axios.delete('https://monkfish-app-co32f.ondigitalocean.app/api/status/reset')
+    const { data } = await axios.delete('https://sea-lion-app-ui2iv.ondigitalocean.app/api/status/reset')
     return data
   } catch (err) {
     throw (err)
