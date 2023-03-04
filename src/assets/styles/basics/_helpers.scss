@@ -1,0 +1,38 @@
+.flex {
+  display: flex;
+
+  > *.full {
+    flex: 1;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.align-end {
+    align-items: flex-end;
+  }
+  &.align-start {
+    align-items: flex-start;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.clean-link {
+  text-decoration: none;
+}
+
+.clean-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

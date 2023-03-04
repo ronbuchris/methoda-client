@@ -1,0 +1,32 @@
+.home-page-container {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .app-title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 70px;
+  }
+  .statuses-transitions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap:100px;
+  }
+  .reset-button{
+    >button{
+      border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(238, 75, 75);
+    margin: 20px;
+    }
+  }
+}
+h2{
+  margin-bottom: 20px;
+}
