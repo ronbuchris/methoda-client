@@ -3,7 +3,7 @@ import { ITransition } from "../interfaces/transition";
 
 const getAllTransitions = async () => {
   try {
-    const { data } = await axios.get('http://localhost:3030/api/transition/')
+    const { data } = await axios.get('/api/transition/')
     return data
   } catch (err) {
     throw (err)
@@ -11,7 +11,7 @@ const getAllTransitions = async () => {
 };
 const createTransition = async (transition: ITransition): Promise<ITransition> => {
   try {
-    const { data } = await axios.post('http://localhost:3030/api/transition/', { transition })
+    const { data } = await axios.post('/api/transition/', { transition })
     return data
   } catch (err) {
     throw (err)
@@ -19,7 +19,7 @@ const createTransition = async (transition: ITransition): Promise<ITransition> =
 };
 const deleteTransition = async (transitionId: string) => {
   try {
-    const { data } = await axios.delete('http://localhost:3030/api/transition/', { data: { transitionId } })
+    const { data } = await axios.delete('/api/transition/', { data: { transitionId } })
     return data
   } catch (err) {
     throw (err)
@@ -27,7 +27,7 @@ const deleteTransition = async (transitionId: string) => {
 };
 const deleteTransitions = async (statusId: string) => {
   try {
-    const { data } = await axios.delete('http://localhost:3030/api/transition/deleteMany', { data: { statusId } })
+    const { data } = await axios.delete('/api/transition/deleteMany', { data: { statusId } })
     return data
   } catch (err) {
     throw (err)
@@ -35,7 +35,7 @@ const deleteTransitions = async (statusId: string) => {
 };
 const resetWorkflowTransitions = async () => {
   try {
-    const { data } = await axios.delete('http://localhost:3030/api/transition/reset')
+    const { data } = await axios.delete('/api/transition/reset')
     return data
   } catch (err) {
     throw (err)

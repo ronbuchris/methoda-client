@@ -3,7 +3,7 @@ import axios from "axios";
 
 const getAllStatuses = async () => {
   try {
-    const { data } = await axios.get('http://localhost:3030/api/status/')
+    const { data } = await axios.get('/api/status/')
     return data
   } catch (err) {
     throw (err)
@@ -11,7 +11,7 @@ const getAllStatuses = async () => {
 };
 const createStatus = async (status: IStatus): Promise<IStatus> => {
   try {
-    const { data } = await axios.post('http://localhost:3030/api/status/', { status })
+    const { data } = await axios.post('/api/status/', { status })
     return data
   } catch (err) {
     throw (err)
@@ -19,7 +19,7 @@ const createStatus = async (status: IStatus): Promise<IStatus> => {
 };
 const deleteStatus = async (statusId: string) => {
   try {
-    const { data } = await axios.delete('http://localhost:3030/api/status/', { data: { statusId } })
+    const { data } = await axios.delete('/api/status/', { data: { statusId } })
     return data
   } catch (err) {
     throw (err)
@@ -27,7 +27,7 @@ const deleteStatus = async (statusId: string) => {
 };
 const updateStatuses = async (data: IStatus[]) => {
   try {
-    const updatedStatuses = await axios.put('http://localhost:3030/api/status/', { data })
+    const updatedStatuses = await axios.put('/api/status/', { data })
     return updatedStatuses.data
   } catch (err) {
     throw (err)
@@ -35,7 +35,7 @@ const updateStatuses = async (data: IStatus[]) => {
 };
 const resetWorkflowStatuses = async () => {
   try {
-    const { data } = await axios.delete('http://localhost:3030/api/status/reset')
+    const { data } = await axios.delete('/api/status/reset')
     return data
   } catch (err) {
     throw (err)
